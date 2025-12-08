@@ -13,3 +13,6 @@ fit_model|function|92ea7bb8a41a5a9e
 load_distance_matrix|function|70f8be86ef24ac10
 data_file|stem|aa57f65977e57392|f581fa006f5e61c8|2c530c1562a7fbd1|-679625259|data/gps/individual_new.dta|t18326.7125925926s|s11969104b|11969104|file|local|vector|||2.094|package 'brms' was built under R version 4.4.3. package 'countrycode' was built under R version 4.4.3|
 data|stem|e66fa3aa1307ff70|315a52f00836ad1f|9cb9cad6d55ce1e1|33550471||t20430.5247328963s|s1471234b|1471234|rds|local|vector|||0.204||
+load_gps_data|function|10d52028557ac6fb
+fit_model|function|1049663e6f8e1402
+load_distance_matrix|function|70f8be86ef24ac10
