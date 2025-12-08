@@ -10,6 +10,11 @@ install.packages(c("brms", "countrycode", "haven",
                    "readxl", "targets", "tidyverse"))
 ```
 
+You will then need to download the individual-level Global Preferences Survey
+data file `individual_new.dta` from 
+[here](https://gps.econ.uni-bonn.de/downloads) and add it to the directory
+`data/gps`.
+
 You can then run the code by running `targets::tar_make()` in your R console.
 
 ## Authors

@@ -10,7 +10,7 @@ tar_source()
 # pipeline
 list(
   # load gps data
-  tar_target(data_file, "data/gps/country.dta", format = "file"),
+  tar_target(data_file, "data/gps/individual_new.dta", format = "file"),
   tar_target(data, load_gps_data(data_file)),
   # load geographic distances
   tar_target(

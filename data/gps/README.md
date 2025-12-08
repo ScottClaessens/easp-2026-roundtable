@@ -1,7 +1,5 @@
-# Country-level data from the Global Preferences Survey
+# Individual-level data from the Global Preferences Survey
 
-Retrieved from https://gps.econ.uni-bonn.de/downloads on 2025-12-08
-
-Note: The dataset country.dta was created with Stata 14. Users of earlier 
-versions are recommended to work with country_v11.dta, which is compatible with
-Stata 11 and newer.
+The file `individual_new.dta` is 11.4 MB, so it is not stored on GitHub. To run
+the code, it is necessary to download the data file from 
+https://gps.econ.uni-bonn.de/downloads and add it to this directory.
