@@ -1,5 +1,10 @@
+options(tidyverse.quiet = TRUE)
 library(targets)
-tar_option_set(packages = c("countrycode", "haven", "readxl", "tidyverse"))
+library(tarchetypes)
+library(tidyverse)
+tar_option_set(
+  packages = c("brms", "countrycode", "haven", "readxl", "tidyverse")
+)
 tar_source()
 
 # pipeline
@@ -26,6 +31,13 @@ list(
   tar_target(
     linguistic_distance_matrix,
     load_distance_matrix(linguistic_distance_matrix_file, log = FALSE)
+  ),
+  # loop over response variables
+  tar_map(
+    values = tibble(response = c("posrecip", "negrecip", "altruism", "trust")),
+    # fit model
+    tar_target(fit, fit_model(data, geographic_distance_matrix,
+                              linguistic_distance_matrix, response))
   ),
   # print session info
   tar_target(

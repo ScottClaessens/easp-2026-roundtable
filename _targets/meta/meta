@@ -7,4 +7,9 @@ linguistic_distance_matrix_file|stem|8dcaa6829b20e15a|798c4fbe21144979|2c530c156
 linguistic_distance_matrix|stem|c58d2e02a20e7d2a|6ee12a1d0e1bf4cd|b11bf555e5be228b|1021922356||t20430.4804393461s|s366357b|366357|rds|local|vector|||0.313||
 geographic_distance_matrix|stem|921b174c3249af40|5dfabd9c6e9fb4c5|6c898002911351ec|588503936||t20430.4804456602s|s499632b|499632|rds|local|vector|||0.297||
 load_gps_data|function|10d52028557ac6fb
+fit_model|function|92ea7bb8a41a5a9e
 load_distance_matrix|function|70f8be86ef24ac10
+fit_trust|stem|599281130e349b54|1420c6d1c60d93de|7a4d2cdfa0ebb7cc|-1459764387||t20430.5195971137s|s8957305b|8957305|rds|local|vector|||104.422|package 'StanHeaders' was built under R version 4.4.3|
+fit_altruism|stem|6e50aa3d4d8380b9|2d203dfadd9ae157|7a4d2cdfa0ebb7cc|-8748795||t20430.5202520853s|s9132088b|9132088|rds|local|vector|||55.985||
+fit_posrecip|stem|595f77b5592f9bf6|577e8308743064b7|7a4d2cdfa0ebb7cc|-1932364115||t20430.5207341369s|s9081605b|9081605|rds|local|vector|||40.937||
+fit_negrecip|stem|5cb402be73e39c64|67699beac4bb804f|7a4d2cdfa0ebb7cc|-1322008197||t20430.5213499988s|s9252930b|9252930|rds|local|vector|||52.672||
