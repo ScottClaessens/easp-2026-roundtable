@@ -23,7 +23,7 @@ fit_model <- function(data, geographic_distance_matrix,
     paste0(
       response,
       " ~ 1 + (1 | gr(iso2_geo, cov = geo_cov)) + ",
-      "(1 | gr(iso2_lin, cov = lin_cov)) + (1 | iso2)"
+      "(1 | gr(iso2_lin, cov = lin_cov))"
     )
   )
   # get priors
@@ -43,6 +43,8 @@ fit_model <- function(data, geographic_distance_matrix,
     family = gaussian(),
     prior = priors,
     backend = "cmdstanr",
+    iter = 4000,
+    control = list(adapt_delta = 0.99),
     cores = 4,
     seed = 1
   )
