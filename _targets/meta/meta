@@ -3,14 +3,40 @@ sessionInfo|stem|4d420e734d24941e|6f338939dd102f8f|2c530c1562a7fbd1|1164010252||
 geographic_distance_matrix_file|stem|3b34f8ff9c4f7434|cf4f2530df174cb5|2c530c1562a7fbd1|-1393619572|data/networks/1F Population Distance.xlsx|t20430.4567729754s|s1004634b|1004634|file|local|vector|||6.516|package 'countrycode' was built under R version 4.4.3. package 'tidyverse' was built under R version 4.4.3. package 'ggplot2' was built under R version 4.4.3|
 linguistic_distance_matrix_file|stem|8dcaa6829b20e15a|798c4fbe21144979|2c530c1562a7fbd1|2119014024|data/networks/2F Country Distance 1pml adj.xlsx|t20430.4567761196s|s779851b|779851|file|local|vector|||1.234|package 'countrycode' was built under R version 4.4.3. package 'tidyverse' was built under R version 4.4.3. package 'ggplot2' was built under R version 4.4.3|
 data_file|stem|fab09337725b1393|533bd45291f136ad|2c530c1562a7fbd1|-679625259|data/gps/country.dta|t20430.6186836762s|s75428b|75428|file|local|vector|||0||
-data|stem|96eb231abf20f052|315a52f00836ad1f|8f99dec4ffd76cf6|33550471||t20430.6205030936s|s5828b|5828|rds|local|vector|||0.266||
 linguistic_distance_matrix|stem|c58d2e02a20e7d2a|6ee12a1d0e1bf4cd|1759be885b2d8aa1|1021922356||t20430.6737803521s|s366357b|366357|rds|local|vector|||0.39||
 geographic_distance_matrix|stem|8fcc21e857e8e2e6|5dfabd9c6e9fb4c5|e221a21f3b50ce5e|588503936||t20430.6737867913s|s513138b|513138|rds|local|vector|||0.265||
-fit_trust|stem|9deb13de013245e9|1420c6d1c60d93de|be0757c53bb74b2c|-1459764387||t20430.7139448233s|s9189561b|9189561|rds|local|vector|||268.406|package 'StanHeaders' was built under R version 4.4.3|
-fit_altruism|stem|f68f056c9e378bb6|2d203dfadd9ae157|be0757c53bb74b2c|-8748795||t20430.7143179972s|s9255126b|9255126|rds|local|vector|||31.64||
-fit_posrecip|stem|8e20a022740a5430|577e8308743064b7|be0757c53bb74b2c|-1932364115||t20430.7146785579s|s9391279b|9391279|rds|local|vector|||30.594||
-fit_negrecip|stem|33ccb0f1750b1114|67699beac4bb804f|be0757c53bb74b2c|-1322008197||t20430.7150754293s|s9409165b|9409165|rds|local|vector|||33.703||
-plot_signal|function|6f744a34ffdb1acc
 load_gps_data|function|10d52028557ac6fb
-fit_model|function|19a0e85ce388db55
+gps_data_file|stem|fab09337725b1393|533bd45291f136ad|2c530c1562a7fbd1|-1029299819|data/gps/country.dta|t20430.6186836762s|s75428b|75428|file|local|vector|||5.594|package 'brms' was built under R version 4.4.3. package 'countrycode' was built under R version 4.4.3|
+rhoads_data_file|stem|b43630838379bda8|2e81848350f54b8f|2c530c1562a7fbd1|-1536583466|data/rhoads2021/GlobalAltruismData.xlsx|t18535.4288425926s|s33604b|33604|file|local|vector|||0||
+rhoads_isocodes_file|stem|a652b2c0e41850d3|5ad046b50daea350|2c530c1562a7fbd1|-1404912520|data/rhoads2021/isocodes.xlsx|t20431.8085839165s|s13294b|13294|file|local|vector|||0||
+fit_altruism_average|stem|769f66f649e68231|17672fdb24b11864|51c28be51a3ffd64|-2093104134||t20431.8581700271s|s16908054b|16908054|rds|local|vector|||54.156||
+data|stem|a932e36a8797469b|874146ceb0dc01cf|9c4c1d660e196dd2|33550471||t20434.6648638546s|s11009b|11009|rds|local|vector|||0.531||
+fit_ZCAF_5y_Donation|stem|25b2227058818fbb|bc3d0c5825064375|1ff868abdc46cf01|-1087878397||t20434.6692106974s|s15258716b|15258716|rds|local|vector|||205.75|Rows containing NAs were excluded from the model.. package 'StanHeaders' was built under R version 4.4.3|
+fit_ZKidney_donors_pmp|stem|b57d70260dcc8987|75d7b5aa1176d988|1ff868abdc46cf01|-1061102034||t20434.6693733849s|s7894959b|7894959|rds|local|vector|||13.61|Rows containing NAs were excluded from the model.|
+fit_ZCAF_5y_Volunteering|stem|ef2d093dc6de7c3e|e4d96b0899627121|1ff868abdc46cf01|579055513||t20434.6697811711s|s15471903b|15471903|rds|local|vector|||34.391|Rows containing NAs were excluded from the model.|
+fit_ZAnimal_reversed_lohi|stem|4d8d81eb665831eb|1810d135cc319d8a|1ff868abdc46cf01|-1429638860||t20434.6699606005s|s5503253b|5503253|rds|local|vector|||15.125|Rows containing NAs were excluded from the model.|
+fit_trust|stem|84fdc41cb9d62166|1420c6d1c60d93de|1ff868abdc46cf01|-1459764387||t20434.6703904338s|s8574139b|8574139|rds|local|vector|||36.672|Rows containing NAs were excluded from the model.|
+fit_negrecip|stem|642ea3d64ac5296f|67699beac4bb804f|1ff868abdc46cf01|-1322008197||t20434.6705384234s|s8947477b|8947477|rds|local|vector|||12.281|Rows containing NAs were excluded from the model.|
+fit_ZCAF_5y_Everyday|stem|fd1e2c4b74c4f84e|b9f8f907c4e2b0fc|1ff868abdc46cf01|252614712||t20434.6707572174s|s15821587b|15821587|rds|local|vector|||18.109|Rows containing NAs were excluded from the model.|
+fit_ZBlood_per_adult_capita|stem|7d6af4f578d05480|7205d67bdaa4401e|1ff868abdc46cf01|2122054472||t20434.6714701441s|s14615344b|14615344|rds|local|vector|||60.797|Rows containing NAs were excluded from the model.|
+fit_posrecip|stem|2ef9847948372887|577e8308743064b7|1ff868abdc46cf01|-1932364115||t20434.6716978964s|s9015583b|9015583|rds|local|vector|||19.094|Rows containing NAs were excluded from the model.|
+fit_ZMarrow_per_capita|stem|87db9a10d3541e20|c8b952efb21f85da|1ff868abdc46cf01|765098549||t20434.6721154856s|s6411432b|6411432|rds|local|vector|||35.703|Rows containing NAs were excluded from the model.|
+fit_altruism|stem|f41cfda99921dc39|2d203dfadd9ae157|1ff868abdc46cf01|-8748795||t20434.6723086903s|s8967287b|8967287|rds|local|vector|||16.235|Rows containing NAs were excluded from the model.|
+signal_ZCAF_5y_Donation|stem|53157e1435641420|4d0f046a9ba14168|51caccf1f7f0d321|-1306832412||t20434.6723122974s|s225b|225|rds|local|vector|||0.047|Method 'posterior_samples' is deprecated. Please see ?as_draws for recommended alternatives.|
+signal_ZKidney_donors_pmp|stem|1641c4cfbc95e683|abffa6e17073c9b5|83de5f5f8f5ce8b0|-1245473853||t20434.6723141856s|s229b|229|rds|local|vector|||0.062|Method 'posterior_samples' is deprecated. Please see ?as_draws for recommended alternatives.|
+signal_ZCAF_5y_Volunteering|stem|ed1ec0dbd238b09c|6ac5cc842fab93d9|0f69e01a00f29d73|-1064794662||t20434.6723202897s|s230b|230|rds|local|vector|||0.031|Method 'posterior_samples' is deprecated. Please see ?as_draws for recommended alternatives.|
+signal_ZAnimal_reversed_lohi|stem|78df0bf78ed5e5e8|9da91d8a0d2bc6eb|d6162b9979cd1aa2|-1704571577||t20434.6723217839s|s232b|232|rds|local|vector|||0.015|Method 'posterior_samples' is deprecated. Please see ?as_draws for recommended alternatives.|
+signal_trust|stem|74eccc0670bdfbea|69ae0ee3281cbd90|31b0b6de49be2e03|-474051876||t20434.6723236872s|s214b|214|rds|local|vector|||0.016|Method 'posterior_samples' is deprecated. Please see ?as_draws for recommended alternatives.|
+signal_negrecip|stem|6f8258c53181abb0|2cbfc890b9087bab|ae07c69af17bbd12|-103146419||t20434.672325577s|s218b|218|rds|local|vector|||0.016|Method 'posterior_samples' is deprecated. Please see ?as_draws for recommended alternatives.|
+signal_ZCAF_5y_Everyday|stem|fa57169eac01b5bb|e2c7cf9e51255cab|658046837ddf788d|-166544068||t20434.6723282659s|s226b|226|rds|local|vector|||0.015|Method 'posterior_samples' is deprecated. Please see ?as_draws for recommended alternatives.|
+signal_ZBlood_per_adult_capita|stem|fca4f01560713956|c39a109a3c64e872|744af7b0ee90877c|1789998980||t20434.6723313711s|s234b|234|rds|local|vector|||0.032|Method 'posterior_samples' is deprecated. Please see ?as_draws for recommended alternatives.|
+signal_posrecip|stem|461de3a0228deaa5|c4ffc1e7c37e731f|024bbb9d000143ed|362716994||t20434.6723338634s|s218b|218|rds|local|vector|||0|Method 'posterior_samples' is deprecated. Please see ?as_draws for recommended alternatives.|
+signal_ZMarrow_per_capita|stem|38c2f777a6cca012|82bcecfd4113c762|c1b2338607f4a51e|300841068||t20434.6723364015s|s229b|229|rds|local|vector|||0.031|Method 'posterior_samples' is deprecated. Please see ?as_draws for recommended alternatives.|
+signal_altruism|stem|2b9b6b92f155d729|f80ab4a0e525f623|5792a61f71e77894|1180154259||t20434.6723380693s|s217b|217|rds|local|vector|||0.032|Method 'posterior_samples' is deprecated. Please see ?as_draws for recommended alternatives.|
+signals|stem|ddc7c41735c9ea81|b7e806891d4b6218|d25bb751efdb487e|-1443804167||t20434.6746832176s|s620b|620|rds|local|vector|||0||
+plot|stem|c74120e1ff93a3dc|08daae77ed94ca54|5f0ed68cfed9d6cb|874984291||t20434.7069554823s|s226425b|226425|rds|local|vector|||1.25||
+plot_signal|function|182a58be8f07893b
+fit_model|function|8db2635662130d56
 load_distance_matrix|function|3d2784c338b81980
+load_data|function|4bcf2aab52e4f3f9
+calculate_signal|function|3d2b6a16697a13ae

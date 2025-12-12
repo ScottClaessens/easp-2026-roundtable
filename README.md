@@ -6,8 +6,8 @@ To run the code, you will need to [install R](https://www.r-project.org/) and
 the following R packages:
 
 ```r
-install.packages(c("brms", "countrycode", "haven", 
-                   "readxl", "targets", "tidyverse"))
+install.packages(c("brms", "countrycode", "haven", "patchwork", 
+                   "readxl", "tarchetypes", "targets", "tidyverse"))
 ```
 
 You can then run the code by running `targets::tar_make()` in your R console.
