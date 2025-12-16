@@ -6,7 +6,7 @@ To run the code, you will need to [install R](https://www.r-project.org/) and
 the following R packages:
 
 ```r
-install.packages(c("brms", "countrycode", "haven", "patchwork", 
+install.packages(c("brms", "countrycode", "ggrepel", "haven", "patchwork", 
                    "readxl", "tarchetypes", "targets", "tidyverse"))
 ```
 

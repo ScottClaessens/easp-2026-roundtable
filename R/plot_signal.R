@@ -77,11 +77,12 @@ plot_signal <- function(signals) {
     )
   # save
   ggsave(
-    filename = "plots/signal.pdf",
+    filename = "plots/signal.png",
     plot = out,
     # 16:9 dimensions
     width = 16 / 2.5,
-    height = 9 / 2.5
+    height = 9 / 2.5,
+    dpi = 300
   )
   return(out)
 }

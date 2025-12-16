@@ -23,7 +23,8 @@ load_data <- function(gps_data_file, rhoads_data_file, rhoads_isocodes_file) {
     left_join(read_excel(rhoads_isocodes_file), by = "Country") |>
     select(c(Country, ISO2, `ZCAF_5y_$`, ZCAF_5y_Volunteering, ZCAF_5y_Everyday,
              ZBlood_per_adult_capita, ZKidney_donors_pmp, ZMarrow_per_capita,
-             ZAnimal_reversed_lohi, altruism_average)) |>
+             ZAnimal_reversed_lohi, altruism_average, per_capita_gdp,
+             wellbeing_thriving, wellbeing_daily, hof_idv)) |>
     rename(
       iso2 = ISO2,
       ZCAF_5y_Donation = `ZCAF_5y_$`

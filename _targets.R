@@ -3,8 +3,8 @@ library(targets)
 library(tarchetypes)
 library(tidyverse)
 tar_option_set(
-  packages = c("brms", "countrycode", "haven", "patchwork", 
-               "readxl", "tidyverse")
+  packages = c("brms", "countrycode", "ggrepel", "haven",
+               "patchwork", "readxl", "tidyverse")
 )
 tar_source()
 
@@ -57,8 +57,57 @@ list(
   # loop over response variables
   mapping,
   tar_combine(signals, mapping[[2]]),
+  # fit regression model (no control)
+  tar_target(
+    fit_regression_no_control,
+    fit_model(data, geographic_distance_matrix, linguistic_distance_matrix, 
+              response = "ZCAF_5y_Donation", predictor = "hof_idv",
+              control = FALSE)
+  ),
+  # fit regression model (with control)
+  tar_target(
+    fit_regression_with_control,
+    fit_model(data, geographic_distance_matrix, linguistic_distance_matrix, 
+              response = "ZCAF_5y_Donation", predictor = "hof_idv",
+              control = TRUE)
+  ),
   # plot signals
-  tar_target(plot, plot_signal(signals)),
+  tar_target(plot_signals, plot_signal(signals)),
+  # plot model predictions
+  tar_target(
+    plot_no_control,
+    plot_model(
+      data,
+      fit_regression_no_control,
+      file = "plots/fit_no_control.png"
+    )
+  ),
+  tar_target(
+    plot_no_control_western_europe,
+    plot_model(
+      data,
+      fit_regression_no_control,
+      region_vars = "Western Europe",
+      file = "plots/fit_no_control_western_europe.png"
+    )
+  ),
+  tar_target(
+    plot_no_control_central_america,
+    plot_model(
+      data,
+      fit_regression_no_control,
+      region_vars = "Central America",
+      file = "plots/fit_no_control_central_america.png"
+    )
+  ),
+  tar_target(
+    plot_with_control,
+    plot_model(
+      data,
+      fit_regression_with_control,
+      file = "plots/fit_with_control.png"
+    )
+  ),
   # print session info
   tar_target(
     sessionInfo,

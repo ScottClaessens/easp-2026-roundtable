@@ -1,6 +1,7 @@
 # function to fit the model
 fit_model <- function(data, geographic_distance_matrix, 
-                      linguistic_distance_matrix, response) {
+                      linguistic_distance_matrix, response,
+                      predictor = NULL, control = TRUE) {
   # countries with observed data for response
   obs_iso2 <- 
     data |>
@@ -28,27 +29,42 @@ fit_model <- function(data, geographic_distance_matrix,
   data$iso2_geo <- data$iso2
   data$iso2_lin <- data$iso2
   # get model formula
-  formula <- bf(
-    paste0(
-      response,
-      " ~ 1 + (1 | gr(iso2_geo, cov = geo_cov)) + ",
+  formula <- paste0(response, " ~ 1")
+  if (!is.null(predictor)) {
+    formula <- paste0(formula, " + scale(", predictor, ")")
+  }
+  if (control) {
+    formula <- paste0(
+      formula,
+      " + (1 | gr(iso2_geo, cov = geo_cov)) + ",
       "(1 | gr(iso2_lin, cov = lin_cov))"
     )
-  )
+  }
   # get priors
   priors <- c(
     prior(normal(0, 0.1), class = Intercept),
-    prior(exponential(5), class = sd),
     prior(exponential(5), class = sigma)
   )
-  # fit model
-  brm(
-    formula = formula,
-    data = data,
-    data2 = list(
+  if (!is.null(predictor)) {
+    priors <- c(priors, prior(normal(0, 0.1), class = b))
+  }
+  if (control) {
+    priors <- c(priors, prior(exponential(5), class = sd))
+  }
+  # get data2 argument
+  if (control) {
+    data2 <- list(
       geo_cov = round(geo_cov, 4),
       lin_cov = round(lin_cov, 4)
-    ),
+    )
+  } else {
+    data2 <- NULL
+  }
+  # fit model
+  brm(
+    formula = bf(formula),
+    data = data,
+    data2 = data2,
     family = gaussian(),
     prior = priors,
     backend = "cmdstanr",
